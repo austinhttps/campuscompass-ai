@@ -6,11 +6,11 @@
 Developed for the **AI for Community Impact Challenge** (November 2026) in collaboration with **Wake Technical Community College**.
 
 ## 👥 Team 6
-- **Austin Mirando** – Systems Architecture & Workflow Implementation
-- **Brianna Camacho** – Student Experience & Care Team Alignment
-- **Tarek Mohamed** – AI Verification Pipeline & Policy Design
-- **Kashish Ramnani** – Empirical Data Evaluation & Pilot Metrics
-- **Academic Advisor:** Tyerice Armwood – Wake Technical Community College
+- **Austin Mirando**
+- **Brianna Camacho**
+- **Tarek Mohamed**
+- **Kashish Ramnani**
+- **Academic Advisor:** Tyerice Armwood
 
 ---
 
