@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusCompass AI • Institutional Briefing & Research Showcase</title>
+  <meta name="description" content="CampusCompass AI: Turning disparate syllabi and volatile shift schedules into workable weekly study plans for community college students.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧭</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Unified Sticky Header (Topbar + Navbar) -->
+  <header class="site-header">
+    <!-- Utility Bar -->
+    <div class="header-topbar">
+      <div class="header-topbar-inner">
+        <div class="topbar-meta">
+          <strong>Wake Technical Community College</strong>
+          <span>•</span>
+          <span class="mono">AI for Community Impact Challenge • Team 6</span>
+        </div>
+        <div class="topbar-actions">
+          <div class="timer-pill">
+            <span>⏱️ Review:</span>
+            <span id="timer-display">15:00</span>
+            <button id="timer-toggle" title="Start/Pause Timer">▶</button>
+            <button id="timer-reset" title="Reset Timer">↺</button>
+          </div>
+          <button class="btn btn-subtle btn-sm open-rubric-btn">
+            Rubric
+          </button>
+          <button id="theme-toggle" class="icon-btn" title="Toggle theme">
+            <span id="theme-icon">☀️</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <div class="header-navbar">
+      <div class="header-navbar-inner">
+        <a href="#" class="header-brand">
+          <span class="brand-text">CampusCompass AI</span>
+          <span class="brand-badge">Pilot Dossier</span>
+        </a>
+
+        <nav class="header-nav">
+          <ul class="header-menu">
+            <li class="header-menu-item"><a href="#video-pitch">Pitch Video</a></li>
+            <li class="header-menu-item"><a href="#problem-analysis">Empirical Need</a></li>
+            <li class="header-menu-item"><a href="#system-architecture">Architecture</a></li>
+            <li class="header-menu-item"><a href="#interactive-sandbox">Interactive Sandbox</a></li>
+            <li class="header-menu-item"><a href="#responsible-governance">Ethics & FERPA</a></li>
+            <li class="header-menu-item"><a href="#pilot-roadmap">Pilot Roadmap</a></li>
+            <li class="header-menu-item"><a href="#document-archive">Deliverables</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-cta-group">
+          <a href="#interactive-sandbox" class="btn btn-primary btn-sm">
+            Launch Sandbox
+          </a>
+          <button id="mobile-toggle" class="mobile-nav-toggle" aria-label="Toggle mobile navigation">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobile-menu" class="mobile-nav-drawer">
+      <ul class="mobile-nav-list">
+        <li><a href="#video-pitch" class="mobile-link">Pitch Video</a></li>
+        <li><a href="#problem-analysis" class="mobile-link">Empirical Need</a></li>
+        <li><a href="#system-architecture" class="mobile-link">System Architecture</a></li>
+        <li><a href="#interactive-sandbox" class="mobile-link">Interactive Sandbox</a></li>
+        <li><a href="#responsible-governance" class="mobile-link">Ethics & FERPA</a></li>
+        <li><a href="#pilot-roadmap" class="mobile-link">Pilot Roadmap</a></li>
+        <li><a href="#document-archive" class="mobile-link">Deliverables</a></li>
+      </ul>
+      <div style="display:flex; gap:0.5rem;">
+        <a href="#interactive-sandbox" class="btn btn-primary btn-sm mobile-link" style="flex:1;">Launch Sandbox</a>
+        <button class="btn btn-secondary btn-sm open-rubric-btn" style="flex:1;">View Rubric</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero & Executive Summary -->
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-editorial">
+          <div>
+            <div class="dossier-meta">
+              Project Dossier • Revised November 15, 2026
+            </div>
+            <h1>Know your next step.</h1>
+            <p class="hero-subtitle">
+              An AI-assisted planning and pedagogical coach that turns disparate course syllabi and volatile shift schedules into workable weekly execution routines for community college students.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#video-pitch" class="btn btn-primary">
+                View 1:51 Pitch Video
+              </a>
+              <a href="#interactive-sandbox" class="btn btn-secondary">
+                Test Interactive Pipeline
+              </a>
+              <a href="Public/CampusCompass-AI-Poster-36x24.pdf" class="btn btn-subtle view-poster-btn">
+                Exhibition Poster (36×24)
+              </a>
+            </div>
+
+            <!-- Empirical Grounding Matrix -->
+            <div class="evidence-matrix">
+              <div class="matrix-cell">
+                <span class="matrix-number">66%</span>
+                <span class="matrix-label">Of community college credit students attend part-time (AACC 2025).</span>
+              </div>
+              <div class="matrix-cell">
+                <span class="matrix-number">59%</span>
+                <span class="matrix-label">Of part-time students work full-time hours alongside classes.</span>
+              </div>
+              <div class="matrix-cell">
+                <span class="matrix-number">N=9,000+</span>
+                <span class="matrix-label">Trial showing generic nudges fail without syllabus-grounded plans (NBER #25036).</span>
+              </div>
+              <div class="matrix-cell">
+                <span class="matrix-number">≥95%</span>
+                <span class="matrix-label">Pilot target for deadline extraction precision with full page attribution.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual-frame">
+            <img src="assets/hero-banner.png" alt="CampusCompass AI Architecture Overview" class="hero-image">
+            <div class="visual-caption">
+              <span>Figure 1: Workflow Overview</span>
+              <span>Wake Tech Care Team Pilot</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pitch Video Showcase -->
+    <section id="video-pitch">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-context">Executive Briefing</div>
+          <h2>Recorded Pitch Presentation</h2>
+          <p class="section-desc">
+            Complete presentation addressing community partner alignment, technical architecture, academic integrity guardrails, and the Spring 2027 pilot protocol.
+          </p>
+        </div>
+
+        <div class="video-module">
+          <div class="video-screen">
+            <video id="pitch-video" controls preload="metadata" poster="assets/hero-banner.png">
+              <source src="Public/CampusCompass-AI-Pitch-Video-v3.mp4" type="video/mp4">
+              Your browser does not support HTML5 video streaming.
+            </video>
+          </div>
+
+          <div class="video-dossier">
+            <div>
+              <div class="video-dossier-head">
+                <span>Presentation Index</span>
+                <span class="mono" style="font-size:0.75rem; color:var(--ink-muted);">Duration: 1:51</span>
+              </div>
+              <ul class="track-list">
+                <li class="track-item active" data-time="0" data-next="25">
+                  <span class="track-time">0:00</span>
+                  <span class="track-label">1. The Community Need & Structural Dilemma</span>
+                </li>
+                <li class="track-item" data-time="25" data-next="50">
+                  <span class="track-time">0:25</span>
+                  <span class="track-label">2. Working Students: Syllabi vs. Shift Work</span>
+                </li>
+                <li class="track-item" data-time="50" data-next="75">
+                  <span class="track-time">0:50</span>
+                  <span class="track-label">3. Two Connected Workflows & AI Fit</span>
+                </li>
+                <li class="track-item" data-time="75" data-next="95">
+                  <span class="track-time">1:15</span>
+                  <span class="track-label">4. Responsible AI, Ethics & Integrity</span>
+                </li>
+                <li class="track-item" data-time="95" data-next="112">
+                  <span class="track-time">1:35</span>
+                  <span class="track-label">5. Staged Pilot Roadmap at Wake Tech</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="video-note">
+              <strong>Architecture Note:</strong> Built to configure directly onto Wake Tech's existing college-approved agent infrastructure (e.g., Element451 Bolt) with zero fragile standalone silos and strict FERPA isolation.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem Analysis & Evidence Base -->
+    <section id="problem-analysis">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-context">Problem Statement</div>
+          <h2>Empirical Need & Local Context</h2>
+          <p class="section-desc">
+            Community college students do not lack ambition; they lack tools that reconcile static academic obligations with highly volatile wage-earning shifts.
+          </p>
+        </div>
+
+        <div class="research-layout">
+          <div class="research-column">
+            <h3>The Planning & Follow-Through Dilemma</h3>
+            <p>
+              Community college students operate under tight structural constraints. The American Association of Community Colleges (AACC) reports that 66% of credit students attend part-time, with 59% of them working full-time jobs. Turning 3–4 dense, inconsistently formatted syllabi into a viable weekly plan requires high cognitive overhead.
+            </p>
+            <p>
+              When a retail or healthcare shift is rescheduled mid-week, pre-built static schedules immediately break. Students are left to recalculate deadlines under pressure, frequently discovering overdue assignments only after penalties have applied.
+            </p>
+
+            <div class="quote-citation">
+              "An experiment across 9,000+ students at three institutions tested generic weekly scheduling modules and reminders. It found no improvement in credits, grades, or retention. Generating plans or repeat use does not prove value without follow-through on verified dates."
+              <div class="citation-meta">— Oreopoulos et al., NBER Working Paper #25036</div>
+            </div>
+          </div>
+
+          <div class="research-column">
+            <h3>Wake Tech Support Structure & Opportunity</h3>
+            <p>
+              Wake Technical Community College organizes student support through dedicated career-field Care Teams (such as the Education Care Team), pairing students with academic advisors, success coaches, and conversational AI agents such as Edai.
+            </p>
+            <p>
+              However, current college AI agents focus strictly on transactional Q&A (e.g., financial aid dates, registration steps). None parse course syllabi, verify individual assignment deadlines, or reconstruct weekly study calendars when job shifts change.
+            </p>
+            <p>
+              <strong>The CampusCompass Opportunity:</strong> Add an adaptive weekly planning and pedagogical routine directly into existing Care Team workflows, enabling students to arrive at human advising appointments with organized, current plans and specific academic questions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- System Architecture & Workflows -->
+    <section id="system-architecture">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-context">Technical Specification</div>
+          <h2>System Architecture: Two Connected Workflows</h2>
+          <p class="section-desc">
+            A repeatable cycle that handles date verification, constraint-based planning, and instructor-aligned learning assistance.
+          </p>
+        </div>
+
+        <div class="architecture-flow">
+          <div class="flow-step">
+            <span class="flow-step-tag">Phase 01</span>
+            <h4>Ingest & Availability</h4>
+            <p>Students upload permitted syllabi or schedule excerpts alongside non-academic obligations and available hours. Personal circumstances remain private.</p>
+          </div>
+
+          <div class="flow-step">
+            <span class="flow-step-tag">Phase 02</span>
+            <h4>Attribution & Verification</h4>
+            <p>AI extracts assignment names and deadlines, citing exact document passages and page numbers. Only student-confirmed dates enter the calendar.</p>
+          </div>
+
+          <div class="flow-step">
+            <span class="flow-step-tag">Phase 03</span>
+            <h4>Constraint Scheduling</h4>
+            <p>Calculates manageable study blocks across courses, preserving buffers and flagging overload. Instructor deadlines remain inviolate.</p>
+          </div>
+
+          <div class="flow-step">
+            <span class="flow-step-tag">Phase 04</span>
+            <h4>Dynamic Adaptation</h4>
+            <p>When an employer changes a work shift, the engine detects collisions, isolates unfinished work, and re-allocates sessions with one-click approval.</p>
+          </div>
+
+          <div class="flow-step">
+            <span class="flow-step-tag">Phase 05</span>
+            <h4>Pedagogical Coaching</h4>
+            <p>Delivers Socratic hints and practice comparisons within instructor policy bounds. Out-of-scope needs route immediately to Care Team advisors.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Live Sandbox -->
+    <section id="interactive-sandbox">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-context">Functional Demonstration</div>
+          <h2>Interactive Pipeline Sandbox</h2>
+          <p class="section-desc">
+            Directly test the three core capabilities evaluated by challenge judges.
+          </p>
+        </div>
+
+        <div class="sandbox-module">
+          <nav class="sandbox-nav">
+            <button class="sandbox-tab active" data-tab="demo-extractor" onclick="switchDemoTab('demo-extractor')">
+              1. Syllabus Extraction & Verification
+            </button>
+            <button class="sandbox-tab" data-tab="demo-calendar" onclick="switchDemoTab('demo-calendar')">
+              2. Shift Collision & Auto-Rebalancing
+            </button>
+            <button class="sandbox-tab" data-tab="demo-coach" onclick="switchDemoTab('demo-coach')">
+              3. Integrity Guardrails & Human Escalation
+            </button>
+          </nav>
+
+          <!-- Tab 1: Extraction -->
+          <div id="demo-extractor" class="sandbox-pane active">
+            <div class="extractor-view">
+              <div>
+                <div style="display:flex; justify-content:space-between; margin-bottom:0.75rem;">
+                  <strong style="font-size:0.9rem;">Syllabus Source Passage (BIO-111)</strong>
+                  <span class="mono" style="font-size:0.75rem; color:var(--ink-muted);">Wake Tech Fall 2026</span>
+                </div>
+                <div class="document-inspection">
+                  <span class="doc-line-number">41</span> [Page 3]<br>
+                  <span class="doc-line-number">42</span> COURSE SCHEDULE & EVALUATION<br>
+                  <span class="doc-line-number">43</span> Week 6: Enzyme Kinetics & Respiration<br>
+                  <span class="doc-line-number">44</span> - Required reading: Campbell Chapter 9<br>
+                  <span class="doc-line-number">45</span> - <span class="doc-matched">Lab Report #3 on Enzyme Kinetics is due Monday, October 14 at 11:59 PM</span> via Blackboard.<br>
+                  <span class="doc-line-number">46</span> <br>
+                  <span class="doc-line-number">47</span> [Page 4]<br>
+                  <span class="doc-line-number">48</span> ASSESSMENTS & EXAMS<br>
+                  <span class="doc-line-number">49</span> - <span class="doc-matched">Quiz 2 covers Chapters 7-9 and will close on Thursday, October 17 at 11:59 PM.</span><br>
+                  <span class="doc-line-number">50</span> - Research Essay draft: Tentatively due mid-October (confirm with instructor during office hours).
+                </div>
+                <p style="font-size:0.8rem; color:var(--ink-muted); margin-top:0.75rem;">
+                  Every date extracted is backed by document and page coordinates. Ambiguous dates (e.g. "mid-October") are left unscheduled until clarified with faculty.
+                </p>
+              </div>
+
+              <div>
+                <div style="display:flex; justify-content:space-between; margin-bottom:0.75rem;">
+                  <strong style="font-size:0.9rem;">Extracted Milestone Records</strong>
+                  <span class="mono" style="font-size:0.8rem; color:var(--ink-muted);">
+                    Confirmed: <span id="verified-count">0</span> / 2
+                  </span>
+                </div>
+
+                <div class="extracted-listing">
+                  <div class="extracted-row">
+                    <div class="extracted-row-info">
+                      <h5>Lab Report #3 (Enzyme Kinetics)</h5>
+                      <div class="extracted-row-meta">
+                        <span class="source-ref">Syllabus p. 3</span>
+                        <span>Due: Oct 14, 11:59 PM</span>
+                        <span class="mono" style="color:var(--accent-green)">99% precision</span>
+                      </div>
+                    </div>
+                    <button class="btn btn-secondary btn-sm btn-confirm-date">Verify Date</button>
+                  </div>
+
+                  <div class="extracted-row">
+                    <div class="extracted-row-info">
+                      <h5>Quiz 2 (Cellular Respiration)</h5>
+                      <div class="extracted-row-meta">
+                        <span class="source-ref">Syllabus p. 4</span>
+                        <span>Due: Oct 17, 11:59 PM</span>
+                        <span class="mono" style="color:var(--accent-green)">99% precision</span>
+                      </div>
+                    </div>
+                    <button class="btn btn-secondary btn-sm btn-confirm-date">Verify Date</button>
+                  </div>
+
+                  <div class="extracted-row" style="background:var(--accent-amber-bg); border-color:var(--accent-amber);">
+                    <div class="extracted-row-info">
+                      <h5 style="color:var(--accent-amber)">Research Essay Draft (Tentative)</h5>
+                      <div class="extracted-row-meta">
+                        <span class="source-ref">Syllabus p. 4</span>
+                        <span>Status: "Mid-October"</span>
+                        <span class="mono" style="color:var(--accent-amber)">Held for Faculty Check</span>
+                      </div>
+                    </div>
+                    <button class="btn btn-subtle btn-sm" onclick="alert('CampusCompass AI generated an email inquiry draft for Prof. Davis requesting the exact deadline.')">
+                      Draft Inquiry
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 2: Calendar -->
+          <div id="demo-calendar" class="sandbox-pane">
+            <div class="calendar-agenda">
+              <div class="agenda-controls">
+                <div>
+                  <strong style="font-size:0.9rem;">Weekly Execution Schedule</strong>
+                  <div id="sim-status-text" style="font-size:0.82rem; color:var(--ink-muted); margin-top:0.2rem;">
+                    Baseline: 3 study sessions successfully fitted around fixed work shifts.
+                  </div>
+                </div>
+                <button id="btn-simulate-shift" class="btn btn-secondary btn-sm">
+                  Simulate Employer Shift Change (Tuesday)
+                </button>
+              </div>
+
+              <div class="agenda-grid">
+                <div class="agenda-day">
+                  <div class="agenda-day-title">Mon (10/14)</div>
+                  <div class="agenda-entry work">Shift: 8:00 AM – 2:00 PM</div>
+                  <div class="agenda-entry study">Final Lab Review (60m)</div>
+                  <div class="mono" style="font-size:0.72rem; color:var(--accent-green); margin-top:auto;">
+                    ✓ Lab Due 11:59 PM
+                  </div>
+                </div>
+
+                <div class="agenda-day">
+                  <div class="agenda-day-title">Tue (10/15)</div>
+                  <div id="tuesday-shift" class="agenda-entry work" style="display:none; background:var(--accent-crimson-bg); border-color:var(--accent-crimson); color:var(--accent-crimson);">
+                    Rescheduled Shift (5–9 PM)
+                  </div>
+                  <div id="conflict-block" class="agenda-entry study">
+                    BIO-111 Quiz Prep (6–7:30 PM)
+                  </div>
+                </div>
+
+                <div class="agenda-day">
+                  <div class="agenda-day-title">Wed (10/16)</div>
+                  <div class="agenda-entry work">Shift: 8:00 AM – 4:00 PM</div>
+                  <div class="agenda-entry study">Practice Problem Set (60m)</div>
+                </div>
+
+                <div class="agenda-day" id="thursday-slot">
+                  <div class="agenda-day-title">Thu (10/17)</div>
+                  <div class="agenda-entry work">Shift: 8:00 AM – 2:00 PM</div>
+                  <div id="moved-study-block" class="agenda-entry resolved" style="display:none;">
+                    Re-allocated: BIO Quiz Prep (7:00 PM)
+                  </div>
+                  <div class="mono" style="font-size:0.72rem; color:var(--accent-green); margin-top:auto;">
+                    ✓ Quiz Closes 11:59 PM
+                  </div>
+                </div>
+
+                <div class="agenda-day">
+                  <div class="agenda-day-title">Fri (10/18)</div>
+                  <div class="agenda-entry work">Shift: 10:00 AM – 6:00 PM</div>
+                  <div style="font-size:0.75rem; color:var(--ink-muted); text-align:center;">Family Commitment</div>
+                </div>
+
+                <div class="agenda-day">
+                  <div class="agenda-day-title">Sat (10/19)</div>
+                  <div class="agenda-entry work">Shift: 9:00 AM – 3:00 PM</div>
+                  <div class="agenda-entry study">Weekly Check-in & Review</div>
+                </div>
+
+                <div class="agenda-day">
+                  <div class="agenda-day-title">Sun (10/20)</div>
+                  <div style="font-size:0.75rem; color:var(--ink-muted); text-align:center; padding-top:2rem;">
+                    Buffer & Recovery
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 3: Coach Console -->
+          <div id="demo-coach" class="sandbox-pane">
+            <div class="terminal-layout">
+              <div>
+                <strong style="font-size:0.9rem;">Policy & Stress Test Scenarios</strong>
+                <p style="font-size:0.82rem; color:var(--ink-muted); margin:0.4rem 0 1rem;">
+                  Select a test case to observe algorithmic policy enforcement and Care Team escalation:
+                </p>
+
+                <div class="terminal-prompts">
+                  <button class="prompt-choice active" data-scenario="answer">
+                    <strong>Test 1: Graded Assignment Policy</strong><br>
+                    <span style="font-size:0.78rem; color:var(--ink-muted);">"Give me the exact answer to Question 4 on the lab"</span>
+                  </button>
+                  <button class="prompt-choice" data-scenario="reschedule">
+                    <strong>Test 2: Mid-Week Shift Extension</strong><br>
+                    <span style="font-size:0.78rem; color:var(--ink-muted);">"Supervisor extended my shift, how do I re-plan?"</span>
+                  </button>
+                  <button class="prompt-choice" data-scenario="overwhelmed">
+                    <strong>Test 3: Stress & Care Team Routing</strong><br>
+                    <span style="font-size:0.78rem; color:var(--ink-muted);">"3 exams, 30 hours of work, feeling overwhelmed"</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="chat-console">
+                <div id="chat-messages-container" class="console-history">
+                  <div class="console-bubble user">
+                    Can you just give me the exact answer to question 4 on the BIO-111 lab assignment?
+                  </div>
+                  <div class="console-bubble assistant">
+                    <span class="console-tag">Policy In Violation • Graded Work Answer Restricted</span>
+                    I cannot provide direct solutions to graded coursework, but we can break down the underlying concept together.<br><br>
+                    Review your respiration rate calculation from step 2. Compare your trial data with the sample curve on lecture slide 14.<br><br>
+                    <button class="btn btn-subtle btn-sm" onclick="alert('Routing to Wake Tech Academic Success Center - Biology Peer Tutor booking.')">
+                      Connect with Wake Tech Biology Tutor
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Beneficiary Personas -->
+    <section id="beneficiaries">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-context">User Personas</div>
+          <h2>Who Will Benefit from the Solution</h2>
+          <p class="section-desc">
+            Engineered specifically for students who already possess clear educational goals but require systematic support executing on them.
+          </p>
+        </div>
+
+        <div class="persona-columns">
+          <div class="persona-cell">
+            <span class="persona-role-tag">Cohort 01</span>
+            <h3>Working Students</h3>
+            <p>
+              Employed in retail, food service, or healthcare with variable shift rosters. When shift times move, the engine detects conflicts, preserves buffers, and drafts instructor notices before deadlines lapse.
+            </p>
+            <div class="persona-outcome">
+              <strong>Impact:</strong> Reduces unexcused late submissions caused by last-minute workplace scheduling.
+            </div>
+          </div>
+
+          <div class="persona-cell">
+            <span class="persona-role-tag">Cohort 02</span>
+            <h3>First-Semester Students</h3>
+            <p>
+              Navigating collegiate systems, multiple LMS interfaces, and syllabus terminology for the first time. Provides a single verified timeline with source links, fostering independent time management habits early.
+            </p>
+            <div class="persona-outcome">
+              <strong>Impact:</strong> Lowers early withdrawal friction and teaches self-directed planning habits.
+            </div>
+          </div>
+
+          <div class="persona-cell">
+            <span class="persona-role-tag">Cohort 03</span>
+            <h3>Returning Adult Learners</h3>
+            <p>
+              Balancing academic re-entry with dependent care and career transitions. Facilitates 30- to 45-minute study intervals without requiring disclosure of personal or family circumstances.
+            </p>
+            <div class="persona-outcome">
+              <strong>Impact:</strong> Structured scaffolding adaptable to non-traditional and parenting schedules.
+            </div>
+          </div>
+
+          <div class="persona-cell">
+            <span class="persona-role-tag">Institutional</span>
+            <h3>Care Team Staff & Advisors</h3>
+            <p>
+              Wake Tech academic advisors and coaches operate under 30-minute appointment limits. Students arrive with verified plans and clear questions, shifting meeting time from calendar triage to high-value guidance.
+            </p>
+            <div class="persona-outcome">
+              <strong>Impact:</strong> Estimated 12–24 hours saved over pilot in routine logistical triage.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Responsible AI, Ethics & FERPA Governance -->
+    <section id="responsible-governance">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-context">Governance Framework</div>
+          <h2>Responsible by Design: Safety, Privacy & FERPA</h2>
+          <p class="section-desc">
+            Every anticipated failure mode is bound to a hard system control, human oversight protocol, and immediate institutional pause authority.
+          </p>
+        </div>
+
+        <div class="data-table-container">
+          <table class="academic-table">
+            <thead>
+              <tr>
+                <th style="width:25%">Risk Domain</th>
+                <th style="width:50%">Technical Architecture Control</th>
+                <th style="width:25%">Human Oversight Protocol</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="risk-label">Date Hallucinations & Errors</td>
+                <td>
+                  All dates display explicit document and page citations. Ambiguous dates stay unscheduled. <strong>Mandatory student verification</strong> is required before dates enter calendars.
+                </td>
+                <td>
+                  Staff audit 2 course extractions per week; critical extraction bugs trigger immediate feature pause.
+                </td>
+              </tr>
+              <tr>
+                <td class="risk-label">Privacy & FERPA Protection</td>
+                <td>
+                  <strong>Zero direct integration with Student Information Systems (SIS).</strong> Data ingestion is limited strictly to syllabi and user-declared hours. Semester-long retention with full student deletion controls.
+                </td>
+                <td>
+                  Wake Tech platform administrators control access permissions and retention schedules.
+                </td>
+              </tr>
+              <tr>
+                <td class="risk-label">Academic Dishonesty & Solvers</td>
+                <td>
+                  Agent strictly enforces course-level policies. <strong>Zero answers provided on graded lab work, quizzes, or exams.</strong> Operates exclusively in Socratic hint mode.
+                </td>
+                <td>
+                  Referral routing directly to course instructors and Wake Tech Academic Success Center tutoring.
+                </td>
+              </tr>
+              <tr>
+                <td class="risk-label">Algorithmic Bias & Inequity</td>
+                <td>
+                  Validated across non-traditional schedules (third-shift, rotating weekend rosters). Accessible plain-language output; keyboard and screen-reader compliant.
+                </td>
+                <td>
+                  Care Teams evaluate demographic distribution of volunteers to verify equitable utility.
+                </td>
+              </tr>
+              <tr>
+                <td class="risk-label">Over-Reliance & De-skilling</td>
+                <td>
+                  Explicit disclosure of AI assistance. Scaffolding systematically fades: reminder frequency is student-governed, and weekly check-ins prompt independent schedule drafting.
+                </td>
+                <td>
+                  Independent planning capability scores evaluated at baseline and pilot conclusion.
+                </td>
+              </tr>
+              <tr>
+                <td class="risk-label">Institutional Control</td>
+                <td>
+                  Configured on college-approved agent environments (e.g. Element451 Bolt) with complete enterprise auditing and access boundaries.
+                </td>
+                <td>
+                  <strong>Institutional Kill-Switch:</strong> Sponsoring Care Team holds unilateral authority to pause or terminate the pilot.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roadmap & Evaluation Benchmarks -->
+    <section id="pilot-roadmap">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-context">Deployment Schedule</div>
+          <h2>Staged Pilot Roadmap & Quantitative Benchmarks</h2>
+          <p class="section-desc">
+            A 4-phase rollout protocol from December 2026 to June 2027 with pre-agreed evaluation gates.
+          </p>
+        </div>
+
+        <div class="roadmap-timeline" style="margin-bottom:3.5rem;">
+          <div class="roadmap-cell">
+            <div class="phase-meta">Phase 1 • Dec 2026 – Jan 2027</div>
+            <div class="phase-title">Institutional Discovery</div>
+            <ul class="phase-list">
+              <li>Confirm sponsoring Care Team</li>
+              <li>Conduct 5–8 student and 2–3 staff interviews</li>
+              <li>Audit existing planning tool capabilities</li>
+              <li>Verify platform licensing and data boundaries</li>
+            </ul>
+          </div>
+
+          <div class="roadmap-cell">
+            <div class="phase-meta">Phase 2 • Feb – Mar 2027</div>
+            <div class="phase-title">Configuration & Stress Testing</div>
+            <ul class="phase-list">
+              <li>Configure workflow on approved platform</li>
+              <li>Run synthetic test suite across messy syllabi</li>
+              <li>Validate shift conflict handling algorithms</li>
+              <li>Secure formal Care Team approval before launch</li>
+            </ul>
+          </div>
+
+          <div class="roadmap-cell">
+            <div class="phase-meta">Phase 3 • Spring 2027</div>
+            <div class="phase-title">Live Student Cohort</div>
+            <ul class="phase-list">
+              <li>Recruit 15–25 volunteers across 1–2 Care Teams</li>
+              <li>Record 2-week pre-pilot baseline metrics</li>
+              <li>Conduct weekly extraction audits (2 syllabi/wk)</li>
+              <li>Administer weekly follow-through check-ins</li>
+            </ul>
+          </div>
+
+          <div class="roadmap-cell">
+            <div class="phase-meta">Phase 4 • May – Jun 2027</div>
+            <div class="phase-title">Decision Gate & Expansion</div>
+            <ul class="phase-list">
+              <li>Evaluate reliability, independence, and costs</li>
+              <li>Review staff effort totals against budget</li>
+              <li>Conduct formal Go / No-Go expansion review</li>
+              <li>Publish complete pilot findings and recommendations</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- KPI Benchmarks -->
+        <div class="section-head" style="margin-bottom:1.5rem;">
+          <h3>Proposed Quantitative Decision Thresholds</h3>
+          <p class="section-desc">Usage alone does not justify expansion; targets are defined upfront with denominators.</p>
+        </div>
+
+        <div class="evidence-matrix" style="border: 1px solid var(--rule); padding: 1.5rem; background: var(--panel); border-radius: var(--radius-xs);">
+          <div class="matrix-cell">
+            <span class="matrix-number">≥95%</span>
+            <span class="matrix-label"><strong>Extraction Precision & Recall:</strong> Verified across audited syllabus dates without invented or missing milestones.</span>
+          </div>
+          <div class="matrix-cell">
+            <span class="matrix-number">75%</span>
+            <span class="matrix-label"><strong>Exit Usefulness:</strong> Minimum percentage of participants rating utility 4 or 5 out of 5.</span>
+          </div>
+          <div class="matrix-cell">
+            <span class="matrix-number">-20%</span>
+            <span class="matrix-label"><strong>Planning Friction:</strong> Reduction in median weekly minutes spent compiling schedules across courses.</span>
+          </div>
+          <div class="matrix-cell">
+            <span class="matrix-number">≥60%</span>
+            <span class="matrix-label"><strong>On-Time Milestone Rate:</strong> Participants demonstrating a 10 percentage point gain or maintaining ≥90%.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deliverables & Project Archive -->
+    <section id="document-archive">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-context">Project Archive</div>
+          <h2>Official Challenge Deliverables</h2>
+          <p class="section-desc">
+            Primary source documents and presentation artifacts for the AI for Community Impact Challenge.
+          </p>
+        </div>
+
+        <div class="archive-grid">
+          <div class="archive-item">
+            <div>
+              <div class="archive-ext">DOCX • 25 KB</div>
+              <h4>Formal Proposal Document</h4>
+              <div class="archive-size">15 Pages • Revised Nov 15, 2026</div>
+              <p>Complete project documentation including literature citations, Care Team integration plan, ethical controls, and evaluation protocols.</p>
+            </div>
+            <a href="Public/CampusCompass AI Proposal.docx" download class="btn btn-secondary btn-sm">
+              Download Proposal (.docx)
+            </a>
+          </div>
+
+          <div class="archive-item">
+            <div>
+              <div class="archive-ext">PPTX • 2.9 MB</div>
+              <h4>Showcase Slide Presentation</h4>
+              <div class="archive-size">13 Slides • Visual System Deck</div>
+              <p>Full slide deck containing illustrative student week breakdowns, system diagrams, and implementation milestones.</p>
+            </div>
+            <a href="Public/CampusCompass-AI-Showcase-Presentation_updated.pptx" download class="btn btn-secondary btn-sm">
+              Download Slides (.pptx)
+            </a>
+          </div>
+
+          <div class="archive-item">
+            <div>
+              <div class="archive-ext">PDF • 4.0 MB</div>
+              <h4>Exhibition Poster (36×24)</h4>
+              <div class="archive-size">Print-Ready High-Resolution Vector</div>
+              <p>Full-scale exhibition poster summarizing the empirical foundation, two core workflows, and pilot decision criteria.</p>
+            </div>
+            <div style="display:flex; gap:0.5rem;">
+              <a href="Public/CampusCompass-AI-Poster-36x24.pdf" class="btn btn-primary btn-sm view-poster-btn" style="flex:1;">
+                View Poster
+              </a>
+              <a href="Public/CampusCompass-AI-Poster-36x24.pdf" download class="btn btn-secondary btn-sm" title="Download PDF">
+                ⬇
+              </a>
+            </div>
+          </div>
+
+          <div class="archive-item">
+            <div>
+              <div class="archive-ext">MP4 • 7.2 MB</div>
+              <h4>Recorded Pitch Presentation</h4>
+              <div class="archive-size">1:51 Runtime • 1080p Video</div>
+              <p>Official video walkthrough covering student challenges, prototype functionality, and institutional rollout strategy.</p>
+            </div>
+            <a href="Public/CampusCompass-AI-Pitch-Video-v3.mp4" download class="btn btn-secondary btn-sm">
+              Download Video (.mp4)
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Credits & Institutional Alignment -->
+    <section id="team-credits">
+      <div class="container">
+        <div class="credits-bar">
+          <div>
+            <div class="section-context">Project Authors</div>
+            <h3 style="margin-bottom:1.25rem;">Team 6 • AI for Community Impact Challenge</h3>
+            <div class="team-roster">
+              <div class="roster-member">
+                <div class="roster-name">Austin Mirando</div>
+                <div class="roster-focus">Systems Architecture & Workflow Implementation</div>
+              </div>
+              <div class="roster-member">
+                <div class="roster-name">Brianna Camacho</div>
+                <div class="roster-focus">Student Experience & Care Team Alignment</div>
+              </div>
+              <div class="roster-member">
+                <div class="roster-name">Tarek Mohamed</div>
+                <div class="roster-focus">AI Verification Pipeline & Policy Design</div>
+              </div>
+              <div class="roster-member">
+                <div class="roster-name">Kashish Ramnani</div>
+                <div class="roster-focus">Empirical Data Evaluation & Pilot Metrics</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="advisor-citation">
+            <div class="section-context">Academic Advisor</div>
+            <div style="font-weight:600; font-size:1.05rem; color:var(--ink);">Tyerice Armwood</div>
+            <div style="font-size:0.85rem; color:var(--ink-secondary); margin-top:0.25rem;">
+              Wake Technical Community College • Education & Student Success
+            </div>
+            <p style="font-size:0.8rem; color:var(--ink-muted); margin-top:0.75rem;">
+              Advising on Care Team operational alignment, institutional partner requirements, and student data governance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <strong>CampusCompass AI</strong> • Prepared for Wake Technical Community College & the AI for Community Impact Challenge
+      </div>
+      <div class="mono" style="font-size:0.78rem;">
+        Revised November 15, 2026 • Team 6
+      </div>
+    </div>
+  </footer>
+
+  <!-- Rubric Drawer -->
+  <div id="rubric-overlay" class="rubric-overlay"></div>
+  <aside id="rubric-drawer" class="dossier-drawer">
+    <div class="dossier-drawer-head">
+      <div>
+        <strong style="font-size:1rem;">Evaluation Rubric Cross-Walk</strong>
+        <div style="font-size:0.78rem; color:var(--ink-muted);">Direct links to proposal sections</div>
+      </div>
+      <button id="close-rubric-btn" class="icon-btn" style="border:none; background:transparent;">✕</button>
+    </div>
+
+    <div class="dossier-drawer-body">
+      <div class="rubric-criteria-card">
+        <div class="rubric-criteria-title">
+          <span>1. Community Problem & Evidence</span>
+          <span class="mono" style="font-size:0.75rem; color:var(--primary);">AACC / NBER</span>
+        </div>
+        <p>Addresses the 66% part-time student population balancing full-time employment; grounded in empirical research showing generic scheduling modules fail without verified syllabus execution.</p>
+        <a href="#problem-analysis" class="rubric-jump">View Problem Analysis →</a>
+      </div>
+
+      <div class="rubric-criteria-card">
+        <div class="rubric-criteria-title">
+          <span>2. Technical Architecture & AI Fit</span>
+          <span class="mono" style="font-size:0.75rem; color:var(--primary);">College Platform</span>
+        </div>
+        <p>Configured directly on existing college agent environments (e.g. Element451 Bolt) with zero fragile SIS coupling and complete human verification gates.</p>
+        <a href="#system-architecture" class="rubric-jump">View Architecture Flow →</a>
+      </div>
+
+      <div class="rubric-criteria-card">
+        <div class="rubric-criteria-title">
+          <span>3. Functional Innovation</span>
+          <span class="mono" style="font-size:0.75rem; color:var(--primary);">Attribution</span>
+        </div>
+        <p>Full document and page attribution, dynamic shift collision re-allocation, and strict instructor-policy enforcement.</p>
+        <a href="#interactive-sandbox" class="rubric-jump">Launch Interactive Sandbox →</a>
+      </div>
+
+      <div class="rubric-criteria-card">
+        <div class="rubric-criteria-title">
+          <span>4. Responsible AI & FERPA</span>
+          <span class="mono" style="font-size:0.75rem; color:var(--primary);">Institutional Stop</span>
+        </div>
+        <p>Strict prohibition against solving graded coursework, data minimization, semester retention, and unilateral institutional pause authority.</p>
+        <a href="#responsible-governance" class="rubric-jump">View Governance Table →</a>
+      </div>
+
+      <div class="rubric-criteria-card">
+        <div class="rubric-criteria-title">
+          <span>5. Pilot Rigor & Decision Gates</span>
+          <span class="mono" style="font-size:0.75rem; color:var(--primary);">Spring 2027</span>
+        </div>
+        <p>Structured 4-phase rollout with 15–25 students, 95% extraction precision benchmark, and independent planning capability scoring.</p>
+        <a href="#pilot-roadmap" class="rubric-jump">View Staged Roadmap →</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- PDF / Exhibition Poster Modal -->
+  <div id="pdf-modal" class="doc-modal">
+    <div class="modal-sheet">
+      <div class="modal-sheet-head">
+        <div>
+          <strong id="modal-title" style="font-size:0.95rem;">Exhibition Poster (36×24)</strong>
+          <span class="mono" style="font-size:0.78rem; color:var(--ink-muted); margin-left:0.5rem;">Print-Ready High Resolution</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:0.5rem;">
+          <a href="Public/CampusCompass-AI-Poster-36x24.pdf" download class="btn btn-secondary btn-sm">Download PDF</a>
+          <button id="modal-close-btn" class="icon-btn">✕</button>
+        </div>
+      </div>
+      <div class="modal-sheet-body">
+        <iframe id="modal-iframe" src="" title="Exhibition Poster Preview"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
